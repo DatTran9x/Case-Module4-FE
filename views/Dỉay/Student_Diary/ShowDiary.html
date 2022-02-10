@@ -4,39 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Delete diary</title>
+    <title>Pike Admin - Free Bootstrap 4 Admin Template</title>
     <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
     <meta name="author" content="Pike Web Development - https://www.pikephp.com">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico">
-
-    <!-- Switchery css -->
-    <link href="../assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico">
 
     <!-- Bootstrap CSS -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Font Awesome CSS -->
-    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Custom CSS -->
-    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/style.css" rel="stylesheet" type="text/css"/>
 
-    <!-- Modernizr -->
-    <script src="../assets/js/modernizr.min.js"></script>
-
-    <!-- jQuery -->
-    <script src="../assets/js/jquery.min.js"></script>
-
-    <!-- Moment -->
-    <script src="../assets/js/moment.min.js"></script>
-
+    <!-- BEGIN CSS for this page -->
     <!--    Ajax-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- BEGIN CSS for this page -->
-    <link rel="stylesheet" href="../assets/plugins/trumbowyg/ui/trumbowyg.min.css">
+
     <!-- END CSS for this page -->
 
 </head>
@@ -50,7 +38,8 @@
 
         <!-- LOGO -->
         <div class="headerbar-left">
-            <a href="index.html" class="logo"><img alt="logo" src="../assets/images/logo.png"/> <span>Admin</span></a>
+            <a href="index.html" class="logo"><img alt="Logo" src="../../assets/images/logo.png"/>
+                <span>Admin</span></a>
         </div>
 
         <nav class="navbar-custom">
@@ -155,7 +144,7 @@
                         <!-- item-->
                         <a href="#" class="dropdown-item notify-item">
                             <div class="notify-icon bg-faded">
-                                <img src="../assets/images/avatars/avatar2.png" alt="img"
+                                <img src="../../assets/images/avatars/avatar2.png" alt="img"
                                      class="rounded-circle img-fluid">
                             </div>
                             <p class="notify-details">
@@ -168,7 +157,7 @@
                         <!-- item-->
                         <a href="#" class="dropdown-item notify-item">
                             <div class="notify-icon bg-faded">
-                                <img src="../assets/images/avatars/avatar3.png" alt="img"
+                                <img src="../../assets/images/avatars/avatar3.png" alt="img"
                                      class="rounded-circle img-fluid">
                             </div>
                             <p class="notify-details">
@@ -181,7 +170,7 @@
                         <!-- item-->
                         <a href="#" class="dropdown-item notify-item">
                             <div class="notify-icon bg-faded">
-                                <img src="../assets/images/avatars/avatar4.png" alt="img"
+                                <img src="../../assets/images/avatars/avatar4.png" alt="img"
                                      class="rounded-circle img-fluid">
                             </div>
                             <p class="notify-details">
@@ -202,7 +191,7 @@
                 <li class="list-inline-item dropdown notif">
                     <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button"
                        aria-haspopup="false" aria-expanded="false">
-                        <img src="../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                        <img src="../../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                         <!-- item-->
@@ -242,6 +231,7 @@
     </div>
     <!-- End Navigation -->
 
+
     <!-- Left Sidebar -->
     <div class="left main-sidebar">
 
@@ -260,10 +250,10 @@
                     </li>
 
                     <li class="submenu">
-                        <a href="#"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span
+                        <a href="#" class="active"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span
                                 class="menu-arrow"></span></a>
                         <ul class="list-unstyled">
-                            <li><a href="tables-basic.html">Basic Tables</a></li>
+                            <li class="active"><a href="student-fee.html">Basic Tables</a></li>
                             <li><a href="tables-datatable.html">Data Tables</a></li>
                         </ul>
                     </li>
@@ -284,13 +274,13 @@
                     </li>
 
                     <li class="submenu">
-                        <a href="#" class="active"><i class="fa fa-fw fa-file-text-o"></i> <span> Forms </span> <span
+                        <a href="#"><i class="fa fa-fw fa-file-text-o"></i> <span> Forms </span> <span
                                 class="menu-arrow"></span></a>
                         <ul class="list-unstyled">
                             <li><a href="forms-general.html">General Elements</a></li>
                             <li><a href="forms-select2.html">Select2</a></li>
                             <li><a href="forms-validation.html">Form Validation</a></li>
-                            <li class="active"><a href="forms-text-editor.html">Text Editors</a></li>
+                            <li><a href="forms-text-editor.html">Text Editors</a></li>
                             <li><a href="forms-upload.html">Multiple File Upload</a></li>
                             <li><a href="forms-datetime-picker.html">Date and Time Picker</a></li>
                             <li><a href="forms-color-picker.html">Color Picker</a></li>
@@ -392,10 +382,49 @@
 
             <div class="container-fluid">
 
+                <!-- Detail Modal -->
+                <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <p>Lecture name:</p>
+                                    <p name="createSubject" id="lectureName" value="1"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p>Date:</p>
+                                    <p type="number" id="date"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p>Content:</p>
+                                    <p type="number" id="content"></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="breadcrumb-holder">
-                            <h1 class="main-title float-left">Diary</h1>
+                            <h1 class="main-title float-left">Tables</h1>
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item active">Tables</li>
+                            </ol>
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -408,16 +437,28 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="card mb-3">
                             <div class="card-header">
-                                <h3><i class="fa fa-file-o"></i>Diary about classroom</h3>
+                                <h3><i class="fa fa-table"></i> Bordered table</h3>
+                                Add <i>.table-bordered</i> for borders on all sides of the table and cells. <a
+                                    target="_blank"
+                                    href="https://getbootstrap.com/docs/4.0/content/tables/#bordered-table">(more
+                                info)</a>
                             </div>
-                            <div>
-                                <input type="number" hidden id="diary_id" value="0">
-                            </div>
+
                             <div class="card-body">
-                                <p id="content"></p>
-                            </div>
-                            <div class="button">
-                                <button class="btn-block" onclick="deleteDiary()">Delete</button>
+
+                                <table class="table table-responsive-xl table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Lecture</th>
+                                        <th scope="col" colspan="2">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div><!-- end card-->
                     </div>
@@ -446,27 +487,57 @@
 </div>
 <!-- END main -->
 
-<script src="../assets/js/popper.min.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
 
-<script src="../assets/js/detect.js"></script>
-<script src="../assets/js/fastclick.js"></script>
-<script src="../assets/js/jquery.blockUI.js"></script>
-<script src="../assets/js/jquery.nicescroll.js"></script>
-<script src="../assets/js/jquery.scrollTo.min.js"></script>
-<script src="../assets/plugins/switchery/switchery.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+
+<script src="../../assets/js/detect.js"></script>
+<script src="../../assets/js/fastclick.js"></script>
+<script src="../../assets/js/jquery.blockUI.js"></script>
+<script src="../../assets/js/jquery.nicescroll.js"></script>
+<script src="../../assets/js/jquery.scrollTo.min.js"></script>
+<script src="../../assets/plugins/switchery/switchery.min.js"></script>
 
 <!-- App js -->
-<script src="../assets/js/pikeadmin.js"></script>
+<script src="../../assets/js/pikeadmin.js"></script>
 
 <!-- BEGIN Java Script for this page -->
-<script src="../assets/plugins/trumbowyg/trumbowyg.min.js"></script>
+
+<!-- END Java Script for this page -->
 <script>
     $(document).ready(function () {
         'use strict';
-        $('.editor').trumbowyg();
-        // localStorage.setItem("diary_id",12);
-        let id = localStorage.getItem("diary_id");
+        let id = localStorage.getItem("classroomId");
+        $.ajax({
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: "http://localhost:8080/lecture/student/diary/" + id,
+            success: function (data) {
+                let body = "";
+                console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                    console.log(data[i]);
+                    body += "<tr>";
+                    body += `<th scope="row">${data[i].dateOfWrite}</th>`;
+                    body += `<td>${data[i].lectureName}</td>`;
+                    body += `<td><button onclick="getDetails(${data[i].id})"  class='btn btn-primary' data-toggle="modal" data-target="#details">Details</button></td>`
+                    body += `<td><button onclick="saveId(${data[i].id})"><a href="../Classroom_Diary/UpdateDiary.html">Edit</a> </button>`
+                    body += `<td><button onclick="saveId(${data[i].id})"><a href="../Classroom_Diary/DeleteDiary.html">Delete</a> </button>`
+                    body += "</tr>";
+                }
+                console.log("thanh cong");
+                document.getElementById("tbody").innerHTML = body;
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+    });
+
+    function getDetails(id) {
         $.ajax({
             type: "GET",
             headers: {
@@ -475,36 +546,23 @@
             },
             url: "http://localhost:8080/lecture/diary/" + id,
             success: function (data) {
-                document.getElementById("content").innerText = data.content;
-                console.log("thanh cong");
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        })
-    });
-
-    // save diary
-    function deleteDiary() {
-        let id = localStorage.getItem('diary_id');
-        let classroomId = localStorage.getItem('classroomId');
-        $.ajax({
-            type: "DELETE",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            url: "http://localhost:8080/lecture/" + classroomId + "/diary/" + id,
-            success: function () {
-                console.log("thanh cong");
+                    console.log(data);
+                    document.getElementById("date").innerText = data.dateOfWrite;
+                    document.getElementById("lectureName").innerText = data.lectureName;
+                    document.getElementById("content").innerText = data.content;
+                    console.log("thanh cong");
             },
             error: function (err) {
                 console.log(err);
             }
         })
     }
-</script>
-<!-- END Java Script for this page -->
 
+    function saveId(id){
+        localStorage.setItem("diary_id",id);
+        console.log(localStorage.getItem("diary_id"));
+    }
+
+</script>
 </body>
 </html>
