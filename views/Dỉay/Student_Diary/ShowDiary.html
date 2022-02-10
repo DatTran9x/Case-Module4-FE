@@ -444,6 +444,10 @@
                                 info)</a>
                             </div>
 
+
+                            <button onclick="saveId(${data[i].id})"><a href="../Classroom_Diary/Write_diary.html">Write new diary</a> </button>
+
+
                             <div class="card-body">
 
                                 <table class="table table-responsive-xl table-bordered">
@@ -507,7 +511,7 @@
 <script>
     $(document).ready(function () {
         'use strict';
-        let id = localStorage.getItem("classroomId");
+        let id = localStorage.getItem("studentId");
         $.ajax({
             type: "GET",
             headers: {
