@@ -467,8 +467,14 @@
 
 	<script>
 
+
 		function show() {
+            let token = localStorage.getItem("token");
+            let studentId = localStorage.getItem("studentId");
 			$.ajax ({
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
 				type:"get",
 				url:"http://localhost:8080/lecture",
 				success: function (data) {
@@ -489,6 +495,7 @@
 
 						str +=`<td>${data[i].appUserStatus.name}</td>`
                         //nảy sang trang kẹp theo id để show ra, viết câu lệnh truy vấn trong repo
+                        str += `<td><button onClick="check()" id="rollCall">Roll-call</button></td>`
                         str +=` <td><a href="ui-icons.html?id=${data[i].id}" onclick="saveStudentId(${data[i].id})">Show Fee</a></td>`
                         str +=` <td><a href="ui-collapse.html?id=${data[i].id}" onclick="saveStudentId(${data[i].id})">Show Grades</a></td>`
 						str +="</tr>"
@@ -512,7 +519,11 @@
 
 		show()
         function selectClassRoom() {
+            let token = localStorage.getItem("token");
             $.ajax({
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
                 type: "GET",
                 url: "http://localhost:8080/lecture/showClass",
                 success: function (data) {
@@ -533,6 +544,7 @@
 
 
         function showByClass() {
+            let token = localStorage.getItem("token");
             let idClassroom = document.getElementById("classesRoom").value;
             $.ajax ({
                 type:"get",
@@ -569,6 +581,52 @@
         }
 
         selectClassRoom()
+
+        function rollCall() {
+            let id = localStorage.getItem('studentId');
+            let token = localStorage.getItem("token");
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/lecture/"+id+"/check/exist",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
+                success: function(data){
+                    if (!data) {
+                        let hidden = document.getElementById("rollCall");
+                        hidden.style.visibility = "hidden";
+                    }
+                }, error: function(err){
+                    console.log(err);
+                }
+            })
+
+        }
+
+        rollCall();
+
+
+
+        function check(){
+            let id = localStorage.getItem('studentId');
+            let token = localStorage.getItem("token");
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/lecture/"+id+"/check",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                },
+                success: function(data){
+                    alert("Checked");
+                    let hidden = document.getElementById("rollCall");
+                    hidden.style.visibility = "hidden";
+                    console.log(data);
+                }, error: function(err){
+                    console.log(err);
+                }
+            })
+        }
+
 	</script>
 
 <!-- END Java Script for this page -->
