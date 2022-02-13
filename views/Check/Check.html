@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-    <button onclick="checkRollCall(1)" id="rollCall">Roll-call</button>
+    <button onclick="check(1)" id="rollCall">Roll-call</button>
 </div>
 </body>
 </html>
@@ -18,21 +18,22 @@
         let id = localStorage.getItem('studentId');
         if (!checkRollCall(id)) {
             let hidden = document.getElementById("rollCall");
-            hidden.style.display === "none";
+            // hidden.style.visibility = "hidden";
         }
     }
 
     rollCall();
 
     function checkRollCall(id){
+        let token = localStorage.getItem("token");
         $.ajax({
             type: "GET",
             url: "http://localhost:8080/lecture/"+id+"/check/exist",
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+            },
             success: function(data){
                 return data;
-                alert("Checked");
-                let hidden = document.getElementById("rollCall");
-                hidden.style.display === "none";
             }, error: function(err){
                 console.log(err);
             }
@@ -40,10 +41,17 @@
     }
 
     function check(id){
+        let token = localStorage.getItem("token");
         $.ajax({
             type: "POST",
             url: "http://localhost:8080/lecture/"+id+"/check",
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+            },
             success: function(data){
+                alert("Checked");
+                let hidden = document.getElementById("rollCall");
+                hidden.style.visibility = "hidden";
                 console.log(data);
             }, error: function(err){
                 console.log(err);
