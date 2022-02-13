@@ -9,24 +9,21 @@
 		<meta name="author" content="Pike Web Development - https://www.pikephp.com">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="../../assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
 
 		<!-- Bootstrap CSS -->
-		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- Font Awesome CSS -->
-		<link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- Custom CSS -->
-		<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 		
 		<!-- BEGIN CSS for this page -->
-    <!--    Ajax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-    <!-- END CSS for this page -->
-				
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+		<!-- END CSS for this page -->
+		
 </head>
 
 <body class="adminbody">
@@ -38,7 +35,7 @@
 
 		<!-- LOGO -->
         <div class="headerbar-left">
-			<a href="index.html" class="logo"><img alt="Logo" src="../../assets/images/logo.png" /> <span>Admin</span></a>
+			<a href="index.html" class="logo"><img alt="Logo" src="assets/images/logo.png" /> <span>Admin</span></a>
         </div>
 
         <nav class="navbar-custom">
@@ -137,7 +134,7 @@
                                 <!-- item-->
                                 <a href="#" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-faded">
-                                        <img src="../../assets/images/avatars/avatar2.png" alt="img" class="rounded-circle img-fluid">
+                                        <img src="assets/images/avatars/avatar2.png" alt="img" class="rounded-circle img-fluid">
                                     </div>
                                     <p class="notify-details">
                                         <b>John Doe</b>
@@ -149,7 +146,7 @@
                                 <!-- item-->
                                 <a href="#" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-faded">
-                                        <img src="../../assets/images/avatars/avatar3.png" alt="img" class="rounded-circle img-fluid">
+                                        <img src="assets/images/avatars/avatar3.png" alt="img" class="rounded-circle img-fluid">
                                     </div>
                                     <p class="notify-details">
                                         <b>Michael Cox</b>
@@ -161,7 +158,7 @@
                                 <!-- item-->
                                 <a href="#" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-faded">
-                                        <img src="../../assets/images/avatars/avatar4.png" alt="img" class="rounded-circle img-fluid">
+                                        <img src="assets/images/avatars/avatar4.png" alt="img" class="rounded-circle img-fluid">
                                     </div>
                                     <p class="notify-details">
                                         <b>Michelle Dolores</b>
@@ -180,9 +177,9 @@
 
                         <li class="list-inline-item dropdown notif">
                             <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="../../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                                <img src="assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
                                     <h5 class="text-overflow"><small>Hello, admin</small> </h5>
@@ -197,7 +194,7 @@
                                 <a href="#" class="dropdown-item notify-item">
                                     <i class="fa fa-power-off"></i> <span>Logout</span>
                                 </a>
-
+								
 								<!-- item-->
                                 <a target="_blank" href="https://www.pikeadmin.com" class="dropdown-item notify-item">
                                     <i class="fa fa-external-link"></i> <span>Pike Admin</span>
@@ -231,31 +228,37 @@
 			<ul>
 
 					<li class="submenu">
-						<a href="index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+						<a class="active" href="index.html"><i class="fa fa-fw fa-bars"></i><span> Quản lý học viên </span> </a>
                     </li>
 
 					<li class="submenu">
-                        <a href="charts.html"><i class="fa fa-fw fa-area-chart"></i><span> Charts </span> </a>
-                    </li>
-					
-					<li class="submenu">
-                        <a href="#" class="active"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
+                        <a href="#"><i class="fa fa-fw fa-table"></i> <span> Quản lý cá nhân </span> <span class="menu-arrow"></span></a>
 							<ul class="list-unstyled">
-								<li class="active"><a href="student-fee.html">Basic Tables</a></li>
-								<li><a href="tables-datatable.html">Data Tables</a></li>
+								<li class="submenu">
+									<a href="#"><i class="fa fa-fw fa-table"></i> <span> Quản lý nhật ký </span> <span class="menu-arrow"></span></a>
+									<ul class="list-unstyled">
+										<li><a href="tables-datatable.html">Thêm nhật ký</a></li>
+										<li><a href="tables-datatable.html">Sửa nhật ký</a></li>
+										<li><a href="tables-datatable.html">Xóa nhật ký</a></li>
+										<li><a href="tables-datatable.html">Tìm kiếm nhật ký</a></li>
+									</ul>
+								</li>
+								<li><a href="tables-datatable.html">Thêm</a></li>
+								<li><a href="tables-datatable.html">Sửa</a></li>
+								<li><a href="tables-datatable.html">Nhật ký</a></li>
 							</ul>
                     </li>
 										
                     <li class="submenu">
-                        <a href="#"><i class="fa fa-fw fa-tv"></i> <span> User Interface </span> <span class="menu-arrow"></span></a>
+                        <a href="#"><i class="fa fa-fw fa-tv"></i> <span> Quản lý môn học </span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
                                 <li><a href="ui-alerts.html">Alerts</a></li>
                                 <li><a href="ui-buttons.html">Buttons</a></li>
                                 <li><a href="ui-cards.html">Cards</a></li>
                                 <li><a href="ui-carousel.html">Carousel</a></li>
-                                <li><a href="ui-collapse.html">Collapse</a></li>
-                                <li><a href="ui-icons.html">Icons</a></li>
-                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-collapse.html">Quản lý học phí</a></li>
+                                <li><a href="ui-icons.html">Quản lý điểm số</a></li>
+                                <li><a href="ui-modals.html">Quản lý môn học</a></li>
                                 <li><a href="ui-tooltips.html">Tooltips and Popovers</a></li>
                             </ul>
                     </li>
@@ -360,56 +363,62 @@
         <div class="content">
             
 			<div class="container-fluid">
-
-															
-										
+					
 						<div class="row">
-								<div class="col-xl-12">
-										<div class="breadcrumb-holder">
-												<h1 class="main-title float-left">Tables</h1>
-												<ol class="breadcrumb float-right">
-													<li class="breadcrumb-item">Home</li>
-													<li class="breadcrumb-item active">Tables</li>
-												</ol>
-												<div class="clearfix"></div>
-										</div>
-								</div>
+									<div class="col-xl-12">
+											<div class="breadcrumb-holder">
+													<h1 class="main-title float-left">Quản lý học viên</h1>
+													<ol class="breadcrumb float-right">
+														<li class="breadcrumb-item">Home</li>
+														<li class="breadcrumb-item active">Dashboard</li>
+													</ol>
+													<div class="clearfix"></div>
+											</div>
+									</div>
 						</div>
 						<!-- end row -->
 
+							<div class="row">
 
-						<div class="row">
-						
-								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-									<div class="card mb-3">
-										<div class="card-header">
-											<h3><i class="fa fa-table"></i> Bordered table</h3>
-											Add <i>.table-bordered</i> for borders on all sides of the table and cells. <a target="_blank" href="https://getbootstrap.com/docs/4.0/content/tables/#bordered-table">(more info)</a>
-										</div>
-											
-										<div class="card-body">								
-											
-											<table class="table table-responsive-xl table-bordered">
-											  <thead>
-												<tr>
-												  <th scope="col">Date</th>
-												  <th scope="col">Fee</th>
-												  <th scope="col">Is paid?</th>
-												</tr>
-											  </thead>
-											  <tbody id="tbody">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<!--										<div class="card mb-3">-->
+											<div class="card-header">
+												<h3><i class="fa fa-users"></i> Danh sách học viên</h3>
+                                                <div class="form-group"> Lớp
+                                                    <select onclick="showByClass()" id="classesRoom" >
+                                                    </select>
+                                                </div>
+											</div>
 
-											  </tbody>
-											</table>
-											
-										</div>														
-									</div><!-- end card-->					
-								</div>
+											<div class="card-body">
 
-						</div>			
-			
+												<table class="table table-bordered table-responsive-xl table-hover display">
+													<thead>
+														<tr>
+															<th>#</th>
+															
+															<th>Email</th>
+															<th>password</th>
+															<th>phone</th>
+															<th>fullName</th>
+															<th>Birth Day</th>
+															<th>address</th>
+															<th>identity</th>
+															<th>Classroom</th>
+															<th>AppUserStatus</th>
+															<th colspan="2">Action</th>
+														</tr>
+													</thead>
+													<tbody id="tbody">
 
+													</tbody>
+												</table>
 
+											</div>
+
+										</div><!-- end card-->
+									</div>
+							</div>
 
             </div>
 			<!-- END container-fluid -->
@@ -432,57 +441,137 @@
 </div>
 <!-- END main -->
 
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+		
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-<script src="../../assets/js/popper.min.js"></script>
-<script src="../../assets/js/bootstrap.min.js"></script>
-
-<script src="../../assets/js/detect.js"></script>
-<script src="../../assets/js/fastclick.js"></script>
-<script src="../../assets/js/jquery.blockUI.js"></script>
-<script src="../../assets/js/jquery.nicescroll.js"></script>
-<script src="../../assets/js/jquery.scrollTo.min.js"></script>
-<script src="../../assets/plugins/switchery/switchery.min.js"></script>
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
 
 <!-- App js -->
-<script src="../../assets/js/pikeadmin.js"></script>
+<script src="assets/js/pikeadmin.js"></script>
 
 <!-- BEGIN Java Script for this page -->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>-->
+<!--	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>-->
+<!--	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>-->
+
+<!--	&lt;!&ndash; Counter-Up&ndash;&gt;-->
+<!--	<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>-->
+<!--	<script src="assets/plugins/counterup/jquery.counterup.min.js"></script>			-->
+
+	<script>
+
+		function show() {
+			$.ajax ({
+				type:"get",
+				url:"http://localhost:8080/lecture",
+				success: function (data) {
+
+					let str = "";
+					for (let i = 0; i<data.length; i++) {
+						str +="<tr>"
+						str +=`<td>${data[i].id}</td>`
+
+						str +=`<td>${data[i].email}</td>`
+						str +=`<td>${data[i].password}</td>`
+						str +=`<td>${data[i].phone}</td>`
+						str +=`<td>${data[i].fullName}</td>`
+						str +=`<td>${data[i].dateOfBirth}</td>`
+						str +=`<td>${data[i].address}</td>`
+						str +=`<td>${data[i].identity}</td>`
+						str +=`<td>${data[i].classrooms.nameClassroom}</td>`
+
+						str +=`<td>${data[i].appUserStatus.name}</td>`
+                        //nảy sang trang kẹp theo id để show ra, viết câu lệnh truy vấn trong repo
+                        str +=` <td><a href="ui-icons.html?id=${data[i].id}" onclick="saveStudentId(${data[i].id})">Show Fee</a></td>`
+                        str +=` <td><a href="ui-collapse.html?id=${data[i].id}" onclick="saveStudentId(${data[i].id})">Show Grades</a></td>`
+						str +="</tr>"
+					}
+					document.getElementById("tbody").innerHTML = str;
+
+				},
+				error: function (err){
+					console.log(err)
+				}
+			})
+		}
+
+        function saveStudentId(id){
+            localStorage.setItem("studentId",id);
+            console.log(id);
+            let token = localStorage.getItem("studentId");
+            console.log(token)
+        }
+
+
+		show()
+        function selectClassRoom() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/lecture/showClass",
+                success: function (data) {
+                    let str = "";
+                    for (let i = 0; i < data.length; i++) {
+                        str += `<option value="${data[i].idClassRoom}"> ${data[i].nameClassroom} </option>`
+                    }
+                    document.getElementById("classesRoom").innerHTML = str;
+                    // document.getElementById("classesRoomEdit").innerHTML = str;
+                    // document.getElementById("idClassroomDelete").innerHTML = str;
+                },
+
+                error: function (err) {
+                    console.log(err)
+                }
+            })
+        }
+
+
+        function showByClass() {
+            let idClassroom = document.getElementById("classesRoom").value;
+            $.ajax ({
+                type:"get",
+                url:"http://localhost:8080/lecture/"+ idClassroom,
+                success: function (data) {
+
+                    let str = "";
+                    for (let i = 0; i<data.length; i++) {
+                        str +="<tr>"
+                        str +=`<td>${data[i].id}</td>`
+
+                        str +=`<td>${data[i].email}</td>`
+                        str +=`<td>${data[i].password}</td>`
+                        str +=`<td>${data[i].phone}</td>`
+                        str +=`<td>${data[i].fullName}</td>`
+                        str +=`<td>${data[i].dateOfBirth}</td>`
+                        str +=`<td>${data[i].address}</td>`
+                        str +=`<td>${data[i].identity}</td>`
+                        str +=`<td>${data[i].classrooms.nameClassroom}</td>`
+
+                        str +=`<td>${data[i].appUserStatus.name}</td>`
+                        str +=` <td><a href="ui-icons.html?id=${data[i].id}" onclick="saveStudentId(${data[i].id})">Show Fee</a></td>`
+                        str +=` <td><a href="ui-collapse.html?id=${data[i].id}" onclick="saveStudentId(${data[i].id})">Show Grades</a></td>`
+
+                        str +="</tr>"
+                    }
+                    document.getElementById("tbody").innerHTML = str;
+
+                },
+                error: function (err){
+                    console.log(err)
+                }
+            })
+        }
+
+        selectClassRoom()
+	</script>
 
 <!-- END Java Script for this page -->
-<script>
-    $(document).ready(function () {
-        'use strict';
-        let id = localStorage.getItem("studentId");
-        $.ajax({
-            type: "GET",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            url: "http://localhost:8080/student/1/fee",
-            success: function (data) {
-                let body = "";
-                console.log(data);
-                for (let i = 0; i < data.length; i++) {
-                    console.log(data[i]);
-                    body += "<tr>";
-                    body += `<th scope="row">${data[i].date}</th>`;
-                    body += `<td>${data[i].fee}</td>`;
-                    if(data[i].isPayed){
-                        body += "<td>Payed</td>";
-                    } else {
-                        body += "<td>Not paid yet</td>";
-                    }
-                    body += "</tr>";
-                    console.log("thanh cong");
-                }
-                document.getElementById("tbody").innerHTML= body;
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        })
-    });
-</script>
+
 </body>
 </html>
