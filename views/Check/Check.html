@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Ajax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div>
+    <button onclick="checkRollCall(1)" id="rollCall">Roll-call</button>
+</div>
+</body>
+</html>
+<script>
+    function rollCall() {
+        let id = localStorage.getItem('studentId');
+        if (!checkRollCall(id)) {
+            let hidden = document.getElementById("rollCall");
+            hidden.style.display === "none";
+        }
+    }
+
+    rollCall();
+
+    function checkRollCall(id){
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/lecture/"+id+"/check/exist",
+            success: function(data){
+                return data;
+                alert("Checked");
+                let hidden = document.getElementById("rollCall");
+                hidden.style.display === "none";
+            }, error: function(err){
+                console.log(err);
+            }
+        })
+    }
+
+    function check(id){
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/lecture/"+id+"/check",
+            success: function(data){
+                console.log(data);
+            }, error: function(err){
+                console.log(err);
+            }
+        })
+    }
+
+</script>

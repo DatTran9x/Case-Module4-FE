@@ -52,8 +52,8 @@
             success: function (data) {
                 console.log('goi ham ====>')
                 console.log('-------->',data);
-                localStorage.setItem("token",data);
-                console.log("thanh cong");
+                localStorage.setItem("token",data.token);
+                console.log(data.token);
             },
             error: function (err) {
                 // console.log(err);
